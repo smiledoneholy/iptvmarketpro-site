@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import LegalPage from"../legal-page";export const metadata:Metadata={title:"DMCA & Copyright Policy",description:"How to submit a copyright notice or counter-notice to Market Pro.",alternates:{canonical:"/dmca"}};export default function Page(){return <LegalPage kind="dmca"/>}

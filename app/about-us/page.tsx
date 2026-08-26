@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import LegalPage from"../legal-page";export const metadata:Metadata={title:"About Us",description:"Learn about Market Pro, our approach to support and responsible online TV use.",alternates:{canonical:"/about-us"}};export default function Page(){return <LegalPage kind="about-us"/>}

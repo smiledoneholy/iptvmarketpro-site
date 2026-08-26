@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import LegalPage from"../legal-page";export const metadata:Metadata={title:"Refund Policy",description:"Eligibility, exclusions and processing for Market Pro refund requests.",alternates:{canonical:"/refund-policy"}};export default function Page(){return <LegalPage kind="refund-policy"/>}

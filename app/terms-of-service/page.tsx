@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import LegalPage from"../legal-page";export const metadata:Metadata={title:"Terms of Service",description:"Terms governing use of the Market Pro website and digital services.",alternates:{canonical:"/terms-of-service"}};export default function Page(){return <LegalPage kind="terms-of-service"/>}

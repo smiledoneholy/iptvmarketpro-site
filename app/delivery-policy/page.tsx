@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import LegalPage from"../legal-page";export const metadata:Metadata={title:"Delivery Policy",description:"How and when Market Pro digital subscription details are delivered.",alternates:{canonical:"/delivery-policy"}};export default function Page(){return <LegalPage kind="delivery-policy"/>}

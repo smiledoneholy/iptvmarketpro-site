@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import { Manrope, Playfair_Display } from "next/font/google";
+import "./globals.css";
+const sans = Manrope({ variable: "--font-sans", subsets: ["latin"] });
+const serif = Playfair_Display({ variable: "--font-serif", subsets: ["latin"], style: ["normal", "italic"] });
+export const metadata: Metadata = { metadataBase:new URL("https://iptvmarketpro.com"), title:{default:"Online TV Subscription | Market Pro",template:"%s | Market Pro"}, description:"Explore Market Pro plans: multi-device TV service, fast activation, HD and 4K quality, and support available 7 days a week.", alternates:{canonical:"/"}, openGraph:{title:"Market Pro — Your entertainment, simply",description:"A smooth TV experience on every screen.",type:"website",locale:"en_US",siteName:"Market Pro",images:[{url:"/og.png",width:1536,height:1024,alt:"Market Pro — Your entertainment. Simply."}]}, twitter:{card:"summary_large_image",title:"Market Pro — Your entertainment, simply",description:"A smooth TV experience on every screen.",images:["/og.png"]}, robots:{index:true,follow:true} };
+export default function RootLayout({children}:{children:React.ReactNode}){const schema={"@context":"https://schema.org","@type":"Organization",name:"Market Pro",url:"https://iptvmarketpro.com"};return <html lang="en"><body className={`${sans.variable} ${serif.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>{children}</body></html>}

@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import LegalPage from"../legal-page";export const metadata:Metadata={title:"Privacy Policy",description:"How Market Pro collects, uses and protects personal information.",alternates:{canonical:"/privacy-policy"}};export default function Page(){return <LegalPage kind="privacy-policy"/>}
