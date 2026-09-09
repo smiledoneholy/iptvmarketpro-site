@@ -1,0 +1,46 @@
+# Editorial image provenance
+
+The current home-cinema and streaming-device images were generated specifically for this project with the built-in OpenAI ImageGen tool on 9 September 2026. They are illustrative scenes, not photographs of Market Pro premises or equipment sold by Market Pro. They were not downloaded from a stock-photo collection. Do not describe them as public-domain or guarantee exclusive copyright ownership.
+
+WebP files in `public/`: `home-cinema-pro.webp`, `home-cinema-pro-small.webp`, `streaming-device-pro.webp`, `streaming-device-pro-small.webp`. Responsive sizes: 1200 × 800 and 640 × 427. Original site logo retained and compressed as `market-pro-logo.webp`; its ownership was not independently verified. Existing social-preview artwork remains unchanged.
+
+## Final generation prompts
+
+### Home cinema
+
+Use case: photorealistic-natural
+Asset type: professional website editorial photograph, wide 16:9 landscape
+Primary request: high-end architectural commercial photograph of a sophisticated dedicated home cinema.
+Scene/backdrop: charcoal acoustic walls, restrained indirect red accent lighting, premium black seating partly in the foreground, impeccably composed large unbranded television displaying only an original abstract dark red gradient.
+Style/medium: magazine-quality architectural photography, realistic luxury but welcoming, fine tactile materials, precise straight architectural lines.
+Composition/framing: balanced wide landscape 16:9, professionally composed room showing the screen and premium seating.
+Lighting/mood: cinematic controlled exposure with shadow details visible; subtle warm practical light and restrained indirect red accents.
+Constraints: no people, programme imagery, interface, symbols, logos, text or watermarks. The television screen must contain only a simple original abstract dark red gradient. Avoid cheap generic stock feel and excessive neon.
+
+### Streaming device
+
+Use case: product-mockup
+Asset type: professional website editorial photograph, wide 16:9 landscape
+Primary request: premium commercial product photograph of a simple unbranded matte-black streaming box and matching minimalist remote on a dark stone console.
+Scene/backdrop: elegantly blurred television edge in the background with a subtle red glow; refined dark interior.
+Style/medium: sophisticated real commercial studio photography, plausible clean geometry, immaculate tactile matte-black finish, beautiful dark stone texture.
+Composition/framing: wide 16:9 landscape, deliberate close-up composition featuring the streaming box and remote clearly as the main subjects, tasteful negative space.
+Lighting/mood: controlled sophisticated studio lighting, soft grazing highlights that define edges, visible shadow detail, subtle red accent only.
+Constraints: no router antennas, people, text, letters, numbers, logos, trademarks, interface imagery or watermarks; minimalist remote has plain unlabeled buttons. Avoid cheap generic stock feel and excessive neon.
+
+## Distinct blog covers — 9 September 2026
+
+Seven additional illustrative images were generated with built-in ImageGen. Together with the existing home cinema and device photographs, every article now has a distinct cover. Files are stored in public/blog-<article-slug>.webp (1200 x 800) and public/blog-<article-slug>-small.webp (640 x 427). Article-specific alt text describes the visible subject. Card alt text remains empty because the adjacent title already labels the same link. These are original illustrative scenes, not screenshots of branded apps, licensing certifications, or photographs of the business.
+
+### Exact prompts
+
+{
+  "wifi-or-ethernet-streaming": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Macro close-up of a clear RJ45 Ethernet cable connector with a restrained red cable jacket beside a matte unbranded Wi-Fi router on a graphite tabletop, router softly out of focus.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI.",
+  "player-vs-subscription": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Top-down flat lay of a streaming remote beside a tablet showing only abstract blank app tiles, and a plain narrow paper receipt completely without text. Graphite desk, one muted red tile.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI.",
+  "set-up-ibo-player-pro": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Over-shoulder view of an adult hand using a black remote toward a television displaying generic abstract setup tiles without words or logos. Shoulder edge only, no face. Dark neutral living room, one restrained red tile.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI.",
+  "fix-streaming-buffering": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Close editorial view of two adult hands checking a cable connection behind a matte black streaming box on a console. Television softly blurred in background. Realistic connector placement, graphite room with restrained red cable accent.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI.",
+  "protect-streaming-account": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Premium smartphone on a graphite desk with a simple clear padlock symbol centered on its otherwise plain dark screen, beside a black streaming remote. Restrained red screen accent. Angled close product composition.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI.",
+  "hd-full-hd-4k-guide": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Close three-quarter view of a high-quality thin television showing an original richly detailed mountain landscape with textured rock, snowy peaks and a clear lake. Bright convincing contrast on screen, dark neutral studio room, tiny muted red accent light.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI.",
+  "responsible-online-tv-guide": "Use case: photorealistic-natural\nAsset type: original editorial blog cover\nPrimary request: Tidy dark neutral desk with a completely blank white document, a refined pen with a restrained red detail, and a black TV remote, arranged naturally in soft daylight. Oblique editorial view with tactile paper texture.\nStyle/medium: premium real product photography, believable materials and optics, soft studio-quality lighting.\nComposition/framing: landscape 3:2 aspect ratio, professional editorial composition, subject clear at thumbnail size.\nColor palette: graphite and dark neutral backgrounds with restrained red accents.\nConstraints: no text, no letters, no logos, no watermarks, no faces, no certification badges. Illustrative original, not actual branded UI."
+}
+

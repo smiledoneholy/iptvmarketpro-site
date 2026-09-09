@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-type Lang = "en" | "fr" | "es";
+import {useLanguage,setLanguage} from "./language-preference";
+import {usePathname} from "next/navigation";
 
 const fr: Record<string,string> = {
   "Benefits":"Avantages","Plans":"Nos offres","Devices":"Appareils","View plans":"Voir les offres",
@@ -51,8 +52,9 @@ Object.assign(fr,{"Continue on WhatsApp →":"Continuer sur WhatsApp →","Openi
 Object.assign(es,{"Continue on WhatsApp →":"Continuar en WhatsApp →","Opening WhatsApp…":"Abriendo WhatsApp…","Opening WhatsApp with your message…":"Abriendo WhatsApp con tu mensaje…"});
 
 export default function LanguageSwitcher(){
-  const [lang,setLang]=useState<Lang>("en");
+  const lang=useLanguage();
+  const pathname=usePathname();
   const originals=useRef(new Map<Text,string>());
-  useEffect(()=>{const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node:Node|null;while((node=walker.nextNode())){const text=node as Text;if(!text.parentElement?.closest(".language-switcher")&&!originals.current.has(text)) originals.current.set(text,text.nodeValue||"");}const dictionary=lang==="fr"?fr:lang==="es"?es:{};originals.current.forEach((raw,text)=>{const clean=raw.trim();const own=text.parentElement?.dataset?.[lang];const translated=lang==="en"?clean:(own||dictionary[clean]||clean);const lead=raw.match(/^\s*/)?.[0]||"";const trail=raw.match(/\s*$/)?.[0]||"";text.nodeValue=lead+translated+trail;});document.documentElement.lang=lang;},[lang]);
-  return <div className="language-switcher" aria-label="Language"><button className={lang==="en"?"active":""} onClick={()=>setLang("en")}>EN</button><button className={lang==="fr"?"active":""} onClick={()=>setLang("fr")}>FR</button><button className={lang==="es"?"active":""} onClick={()=>setLang("es")}>ES</button></div>;
+  useEffect(()=>{const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node:Node|null;while((node=walker.nextNode())){const text=node as Text;if(!text.parentElement?.closest(".language-switcher,script,style,code,[data-no-translate]")&&!originals.current.has(text)) originals.current.set(text,text.nodeValue||"");}const dictionary=lang==="fr"?fr:lang==="es"?es:{};originals.current.forEach((raw,text)=>{const clean=raw.trim();const own=text.parentElement?.dataset?.[lang];const translated=lang==="en"?clean:(own||dictionary[clean]||clean);const lead=raw.match(/^\s*/)?.[0]||"";const trail=raw.match(/\s*$/)?.[0]||"";text.nodeValue=lead+translated+trail;});document.documentElement.lang=lang;},[lang,pathname]);
+  return <div className="language-switcher" aria-label="Language"><button className={lang==="en"?"active":""} onClick={()=>setLanguage("en")}>EN</button><button className={lang==="fr"?"active":""} onClick={()=>setLanguage("fr")}>FR</button><button className={lang==="es"?"active":""} onClick={()=>setLanguage("es")}>ES</button></div>;
 }
