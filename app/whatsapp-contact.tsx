@@ -7,8 +7,9 @@ export function trackWhatsApp(placement: string, plan?: string) {
   analytics.gtag?.("event", "whatsapp_click", {placement, ...(plan ? {plan} : {})});
 }
 
-export default function WhatsAppContact() {
-  const lang = useLanguage();
+export default function WhatsAppContact({locale}: {locale?: "en" | "fr" | "es"}) {
+  const preference = useLanguage();
+  const lang = locale ?? preference;
   const copy = {
     en: {title:"Not sure which plan fits your device?", text:"Ask us about your device, the channels you need and the total price before you order. No payment needed to ask a question.", button:"Ask on WhatsApp", message:"Hello Market Pro, I would like to check device compatibility and channel availability before choosing a plan."},
     fr: {title:"Quelle offre choisir pour votre appareil ?", text:"Vérifiez avec nous votre appareil, les chaînes souhaitées et le prix total avant de commander. Aucun paiement nécessaire pour poser une question.", button:"Discuter sur WhatsApp", message:"Bonjour Market Pro, je souhaite vérifier la compatibilité de mon appareil et la disponibilité des chaînes avant de choisir une offre."},
