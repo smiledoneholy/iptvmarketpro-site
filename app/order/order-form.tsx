@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import SiteHeader from "../site-header";
 
 import {plans, findPlan} from "../plans-data";
+import {trackWhatsApp} from "../whatsapp-contact";
 import SiteFooter from "../site-footer";
 
 export default function OrderPage({initialPlan}: {initialPlan:string}) {
@@ -13,6 +14,7 @@ export default function OrderPage({initialPlan}: {initialPlan:string}) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const message = ["Hello Market Pro, I would like to place an order.", "", `Name: ${form.get("name")}`, `WhatsApp: ${form.get("whatsapp")}`, `Selected offer: ${findPlan(String(form.get("offer"))).duration} — ${findPlan(String(form.get("offer"))).price} USD`, "", "Please send me the PayPal payment link."].join("\n");
+    trackWhatsApp("order_form", selected);
     setSubmitted(true);
     window.location.assign(`https://wa.me/212638647729?text=${encodeURIComponent(message)}`);
   }
