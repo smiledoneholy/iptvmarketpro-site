@@ -1,0 +1,26 @@
+import type {Metadata} from 'next';
+import SiteHeader from '../site-header';
+import SiteFooter from '../site-footer';
+
+export const metadata: Metadata = {
+  title: 'IPTV subscription: compare plans, devices and streaming quality',
+  description: 'Choose an IPTV subscription with clear checks for price, compatible devices, picture quality and support. Compare Market Pro plans before requesting an order.',
+  alternates: {canonical: '/iptv-subscription'},
+};
+
+export default function Page() {
+  return <main id="main-content"><SiteHeader/><header className="article-hero">
+    <p className="eyebrow">Subscription guide</p>
+    <h1>Choose an IPTV subscription that fits your setup.</h1>
+    <p>Start with what you want to watch, the device you already own and the full cost. Use this guide to check the details before choosing a duration.</p>
+    <a className="button" href="/plans">Compare subscription plans</a>
+  </header><article className="article-body" data-no-translate>
+    <section><div><h2>What is an IPTV subscription?</h2><p>IPTV delivers television over an internet connection. A subscription provides access to a service for an agreed period; a player is the software used to open that service on a compatible device. Buying a player licence does not by itself include a channel subscription.</p><p>Before ordering, identify the programmes you need and ask whether they are available in your country and on your device. A large catalogue alone does not establish that a particular channel or event is included.</p></div></section>
+    <section><div><h2>Compare the total cost and commitment</h2><p>A shorter term limits the amount you commit while assessing whether a service suits your routine. A longer term can have a lower monthly equivalent, but you pay the full term upfront. Compare the total, the number of simultaneous connections and any separate player fee.</p><p>Market Pro lists 1, 3, 6 and 12 month options for one simultaneous connection. See the current <a href="/plans">IPTV subscription plans and prices</a> for totals and order options.</p></div></section>
+    <section><div><h2>Check your device before paying</h2><p>Send support the exact television or streaming-device model and the name of your player. Availability can differ between model years and app stores. Confirm whether you need a separate player licence and whether the setup works with the equipment you have.</p><p>Our <a href="/setup">device setup guides</a> explain the basic steps. For a fuller buying checklist, read <a href="/blog/choose-tv-subscription">what to check before choosing a subscription</a>.</p></div></section>
+    <section><div><h2>Choose a useful picture quality</h2><p>The source, player, display and connection all affect the picture you can watch. A 4K television does not turn every stream into native 4K, and a higher advertised resolution does not guarantee smoother playback.</p><p>Read <a href="/blog/hd-full-hd-4k-guide">HD vs Full HD vs 4K</a> to understand the tradeoffs before choosing equipment or changing your internet plan.</p></div></section>
+    <section><div><h2>If streaming keeps buffering, investigate first</h2><p>Repeated pauses can involve the local network, viewing device or individual stream. Compare another programme and another app on the same device, then try a wired connection where supported. Buying another subscription may not resolve a local Wi-Fi problem.</p><p>Follow our <a href="/blog/fix-streaming-buffering">streaming keeps buffering troubleshooting guide</a> and record the results before contacting support.</p></div></section>
+    <section><div><h2>Know what happens after your request</h2><p>The Market Pro order form starts a request; it does not take payment. Support checks your requirements before sending an individual PayPal payment link. Read the <a href="/delivery-policy">delivery process</a> and <a href="/refund-policy">refund conditions</a> before deciding.</p><p>Ask about your country, required channels, device and number of screens. Keep the confirmation so you can refer to the agreed details later.</p></div></section>
+    <aside><strong>About this guide</strong><p>This guide is published by Market Pro, which sells subscription plans. It is a buying guide, not an independent ranking or a hands-on comparison of other providers.</p></aside>
+  </article><section className="detail-cta"><h2>Ready to check your setup?</h2><p>Have your device model and viewing requirements ready. We can help you check them before payment.</p><a className="button" href="/contact">Ask about compatibility</a><p><a href="/plans">View all subscription plans →</a></p></section><SiteFooter/></main>;
+}
