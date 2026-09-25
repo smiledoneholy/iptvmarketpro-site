@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Home(){return <main id="main-content" className="subscription-home">
 
-  <SiteHeader active="home"/>
+  <link rel="preload" as="image" href="/home-cinema-pro.webp" imageSrcSet="/home-cinema-pro-small.webp 640w, /home-cinema-pro.webp 1200w" imageSizes="(max-width: 900px) 100vw, 48vw" fetchPriority="high"/><SiteHeader active="home"/>
 
   <section className="hero" id="top"><div className="hero-copy"><p className="eyebrow"><span/> Online TV service · Support 7 days a week</p><h1>Choose an IPTV subscription<br/><em>that fits your setup.</em></h1><p className="hero-lead">Start with what you want to watch, the device you already own and the full cost. Check the details before choosing a duration.</p><div className="hero-actions"><a className="button" href="#plans">Explore plans <span>→</span></a><a className="text-link" href="#how">How does it work?</a></div><div className="trust-row"><span>✓ Confirm your device first</span><span>✓ Support 7 days a week</span><span>✓ 7-day refund policy</span></div></div><div className="hero-visual"><img className="hero-photo" src="/home-cinema-pro.webp" srcSet="/home-cinema-pro-small.webp 640w, /home-cinema-pro.webp 1200w" sizes="(max-width: 900px) 100vw, 48vw" width="1200" height="800" fetchPriority="high" alt="Home cinema with a large screen, dark seating and subtle red lighting"/><div className="visual-badge"><b>4K</b><span>Ultra<br/>high definition</span></div><div className="live-pill"><i/> PREMIUM EXPERIENCE</div></div></section>
 
